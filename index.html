@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tees Beauty Spa — Professional Site Preview</title>
+    <meta
+      name="description"
+      content="Tees Beauty Spa — IV Glow, Mesotherapy, Teeth Whitening, Lipolysis. Port Harcourt's trusted beauty & wellness clinic." />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --accent: #e64f9b;
+        --accent-2: #f3d8e8;
+        --bg: #fafafa;
+        --muted: #666;
+        --max-width: 1100px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto,
+          "Helvetica Neue", Arial;
+        line-height: 1.5;
+        margin: 0;
+        background: var(--bg);
+        color: #222;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      header.hero {
+        background: linear-gradient(
+          180deg,
+          rgba(230, 79, 155, 0.06),
+          rgba(243, 216, 232, 0.03)
+        );
+        padding: 48px 20px;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* nav */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+      }
+      .brand {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .brand .logo {
+        width: 56px;
+        height: 56px;
+        background: var(--accent);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+      .nav-links a {
+        font-weight: 600;
+        color: #333;
+      }
+      .cta-btn {
+        background: var(--accent);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* hero content */
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 32px;
+        align-items: center;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-weight: 700;
+      }
+      h2.hero-title {
+        font-family: Playfair Display, Georgia, serif;
+        font-size: 38px;
+        margin: 12px 0 10px;
+      }
+      p.lead {
+        color: var(--muted);
+        font-size: 16px;
+        margin: 0 0 18px;
+      }
+
+      /* services */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .service {
+        background: #fff;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(20, 20, 20, 0.06);
+      }
+      .service h4 {
+        margin: 6px 0 8px;
+      }
+
+      /* gallery */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .gallery-grid img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      /* about */
+      .about {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+      .about img {
+        width: 48%;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(20, 20, 20, 0.06);
+      }
+
+      /* testimonials */
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      blockquote {
+        background: #fff;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(20, 20, 20, 0.06);
+        margin: 0;
+      }
+
+      /* contact */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 20px;
+      }
+      form {
+        background: #fff;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(20, 20, 20, 0.06);
+      }
+      label {
+        display: block;
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #e9e9e9;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      footer {
+        background: #111;
+        color: #fff;
+        padding: 30px 20px;
+        margin-top: 40px;
+      }
+
+      /* responsive */
+      @media (max-width: 920px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .about img {
+          width: 100%;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+        .brand h1 {
+          font-size: 16px;
+        }
+        .h2 {
+          font-size: 26px;
+        }
+      }
+
+      /* small helpers */
+      .muted-small {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .inline {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .pill {
+        background: var(--accent-2);
+        color: var(--accent);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NOTE: This is a professional single-file site preview. To make live, upload to any static host (Netlify, Vercel, GitHub Pages) and edit contact form endpoint. -->
+
+    <header class="hero">
+      <div class="container">
+        <nav>
+          <div class="brand">
+            <div class="logo">T</div>
+            <div>
+              <h1>Tees Beauty Spa</h1>
+              <div class="muted-small">Port Harcourt • Ada George</div>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <button class="cta-btn" onclick="openBooking()">Book Now</button>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Premium Beauty & Wellness</div>
+            <h2 class="hero-title">
+              Glow. Nourish. Transform, Professional spa treatments in Port
+              Harcourt
+            </h2>
+            <p class="lead">
+              IV Glow Drips • Mesotherapy • Teeth Whitening • Lipolysis •
+              Facials <br />Trusted local specialists, clean facility and
+              discreet home service options.
+            </p>
+            <div style="display: flex; gap: 12px; align-items: center">
+              <button class="cta-btn" onclick="openBooking()">
+                Book Appointment
+              </button>
+              <a
+                href="https://wa.me/2348120221368"
+                target="_blank"
+                style="
+                  padding: 10px 14px;
+                  border-radius: 10px;
+                  background: #fff;
+                  border: 1px solid #eee;
+                "
+                >Message on WhatsApp</a
+              >
+            </div>
+
+            <div style="margin-top: 18px">
+              <h3 style="margin: 0 0 8px">Popular services</h3>
+              <div class="services">
+                <div class="service">
+                  <h4>IV Glow Drip</h4>
+                  <p class="muted-small">
+                    Hydration and vitamin therapy for instant radiance.
+                  </p>
+                </div>
+                <div class="service">
+                  <h4>Mesotherapy</h4>
+                  <p class="muted-small">
+                    Targeted skin rejuvenation & brightening.
+                  </p>
+                </div>
+                <div class="service">
+                  <h4>Teeth Whitening</h4>
+                  <p class="muted-small">
+                    Safe professional whitening for a confident smile.
+                  </p>
+                </div>
+                <div class="service">
+                  <h4>Lipolysis (Fat Dissolve)</h4>
+                  <p class="muted-small">
+                    Non-surgical contouring for trouble spots.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <img
+              src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BhfGVufDB8fDB8fHww"
+              alt="spa hero"
+              style="
+                width: 100%;
+                border-radius: 12px;
+                object-fit: cover;
+                height: 360px;
+              " />
+            <div style="display: flex; gap: 10px">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683134294916-473fc738750b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3BhfGVufDB8fDB8fHww"
+                style="
+                  width: 50%;
+                  height: 120px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                " />
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683134297492-cce5fc6dae31?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3BhfGVufDB8fDB8fHww"
+                style="
+                  width: 50%;
+                  height: 120px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                " />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" style="padding: 40px 20px">
+      <!-- Services -->
+      <section id="services">
+        <h2 style="font-size: 24px; margin-bottom: 10px">Services</h2>
+        <p class="muted">Full list of treatments and session durations.</p>
+        <div style="margin-top: 18px" class="services">
+          <div class="service">
+            <h4>IV Glow Therapy</h4>
+            <p class="muted-small">
+              30–60 mins • Boost hydration, vitamins and radiance. Performed by
+              certified practitioners.
+            </p>
+          </div>
+          <div class="service">
+            <h4>Mesotherapy</h4>
+            <p class="muted-small">
+              45–90 mins • Micronutrient injections to rejuvenate skin texture
+              and tone.
+            </p>
+          </div>
+          <div class="service">
+            <h4>Teeth Whitening</h4>
+            <p class="muted-small">
+              30–45 mins • Fast professional whitening with safe protocols.
+            </p>
+          </div>
+          <div class="service">
+            <h4>Lipolysis (Fat Dissolve)</h4>
+            <p class="muted-small">
+              60 mins • Non-surgical contouring for localized fat release.
+            </p>
+          </div>
+          <div class="service">
+            <h4>Facials & Skin Care</h4>
+            <p class="muted-small">
+              Custom facials, acne treatments, peels and maintenance plans.
+            </p>
+          </div>
+          <div class="service">
+            <h4>Home Service</h4>
+            <p class="muted-small">
+              Discreet appointments at your location (Port Harcourt area) —
+              contact to confirm availability.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" style="margin-top: 48px">
+        <h2 style="font-size: 24px; margin-bottom: 10px">
+          About Tees Beauty Spa
+        </h2>
+        <div class="about" style="margin-top: 18px">
+          <img
+            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+            alt="about" />
+          <div>
+            <p class="muted">
+              Founded and managed by Ada George, Tees Beauty Spa is a Port
+              Harcourt-based clinic focused on non-surgical aesthetics and
+              wellness. We combine certified practitioners with clean facilities
+              and a client-first approach. We also offer training sessions for
+              small groups on beauty maintenance and safe at-home care.
+            </p>
+
+            <h4 style="margin-top: 18px">Why clients pick us</h4>
+            <ul class="muted-small">
+              <li>Certified, experienced staff</li>
+              <li>Clean, discreet environment</li>
+              <li>Fast booking via WhatsApp + online booking</li>
+              <li>Flexible home-visit service within Port Harcourt</li>
+            </ul>
+
+            <div style="margin-top: 16px">
+              <a class="pill" href="https://wa.me/2348120221368" target="_blank"
+                >WhatsApp: 08120221368</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" style="margin-top: 48px">
+        <h2 style="font-size: 24px; margin-bottom: 10px">Gallery</h2>
+        <div class="gallery-grid" style="margin-top: 12px">
+          <img
+            src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+            alt="gallery1" />
+          <img
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+            alt="gallery2" />
+          <img
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+            alt="gallery3" />
+          <img
+            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+            alt="gallery4" />
+          <img
+            src="https://images.unsplash.com/photo-1555820585-c5ae44394b79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHNwYXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="gallery5" />
+          <img
+            src="https://images.unsplash.com/photo-1630595271375-5073a6c0638b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHNwYXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="gallery6" />
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" style="margin-top: 48px">
+        <h2 style="font-size: 24px; margin-bottom: 10px">What clients say</h2>
+        <div class="testimonials" style="margin-top: 12px">
+          <blockquote>
+            <p>
+              “Amazing results — the IV Glow treatment was quick and I saw
+              difference in 3 days. Staff were friendly and professional.”
+            </p>
+            <p><strong>— Joy M.</strong></p>
+          </blockquote>
+          <blockquote>
+            <p>
+              “They were discreet and followed safety protocols. My teeth
+              whitening session was life-changing.”
+            </p>
+            <p><strong>— Emeka O.</strong></p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Contact & Booking -->
+      <section id="contact" style="margin-top: 48px; margin-bottom: 20px">
+        <h2 style="font-size: 24px; margin-bottom: 10px">Contact & Book</h2>
+        <div class="contact-grid" style="margin-top: 12px">
+          <div>
+            <form id="contactForm" onsubmit="return submitContact(event)">
+              <label for="name">Full name</label>
+              <input
+                id="name"
+                name="name"
+                required
+                placeholder="Your full name" />
+
+              <label for="phone">Phone / WhatsApp</label>
+              <input
+                id="phone"
+                name="phone"
+                required
+                placeholder="e.g. 0812xxxxxxx" />
+
+              <label for="service">Service of interest</label>
+              <select id="service" name="service">
+                <option>IV Glow Drip</option>
+                <option>Mesotherapy</option>
+                <option>Teeth Whitening</option>
+                <option>Lipolysis</option>
+                <option>Custom Facial</option>
+              </select>
+
+              <label for="date">Preferred date (optional)</label>
+              <input id="date" name="date" type="date" />
+
+              <label for="notes">Notes</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Allergies, preferred time, location for home visit..."></textarea>
+
+              <div style="display: flex; gap: 10px; align-items: center">
+                <button class="cta-btn" type="submit">
+                  Send booking request
+                </button>
+                <a
+                  class="pill"
+                  href="https://wa.me/2348120221368?text=Hi%20Ada%2C%20I%27d%20like%20to%20book%20a%20%5BSERVICE%5D%20on%20%5BDATE%5D.%20My%20name%20is%20%5BNAME%5D."
+                  target="_blank"
+                  >Book on WhatsApp</a
+                >
+              </div>
+
+              <p class="muted" style="margin-top: 12px">
+                We’ll reply within 24 hours via WhatsApp or phone to confirm
+                your appointment. For immediate booking, use WhatsApp.
+              </p>
+            </form>
+          </div>
+
+          <aside
+            style="
+              padding: 18px;
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 6px 20px rgba(20, 20, 20, 0.06);
+            ">
+            <h4 style="margin-top: 0">Visit Us</h4>
+            <p class="muted-small">
+              Ada George New Road, Road 12 — Port Harcourt (confirm exact
+              address by WhatsApp)
+            </p>
+            <p style="margin: 6px 0">
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/2348120221368" target="_blank"
+                >08120221368</a
+              >
+            </p>
+            <p style="margin: 6px 0">
+              <strong>Hours:</strong> Mon–Sat 9:00–18:00
+            </p>
+
+            <div style="margin-top: 12px">
+              <h5 style="margin: 0 0 8px">Payment</h5>
+              <p class="muted-small">
+                Cash on visit, bank transfer, or POS. We will send payment
+                instructions on confirmation.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 12px;
+        ">
+        <div>
+          <strong>Tees Beauty Spa</strong>
+          <div class="muted-small">Port Harcourt — Ada George</div>
+        </div>
+        <div class="inline">
+          <div class="muted-small">WhatsApp</div>
+          <a class="pill" href="https://wa.me/2348120221368" target="_blank"
+            >08120221368</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking modal & scripts -->
+    <div
+      id="bookingModal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      ">
+      <div
+        style="
+          background: #fff;
+          border-radius: 12px;
+          max-width: 600px;
+          width: 100%;
+          padding: 20px;
+          position: relative;
+        ">
+        <button
+          onclick="closeBooking()"
+          style="
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            border: none;
+            background: transparent;
+            font-size: 18px;
+            cursor: pointer;
+          ">
+          ✕
+        </button>
+        <h3 style="margin-top: 0">Quick booking</h3>
+        <p class="muted-small">
+          Fill this and we’ll send confirmation on WhatsApp.
+        </p>
+        <form id="modalForm" onsubmit="return submitModal(event)">
+          <input
+            id="m_name"
+            placeholder="Full name"
+            required
+            style="
+              padding: 10px;
+              border-radius: 8px;
+              border: 1px solid #eee;
+              width: 100%;
+              margin-bottom: 8px;
+            " />
+          <input
+            id="m_phone"
+            placeholder="Phone / WhatsApp"
+            required
+            style="
+              padding: 10px;
+              border-radius: 8px;
+              border: 1px solid #eee;
+              width: 100%;
+              margin-bottom: 8px;
+            " />
+          <select
+            id="m_service"
+            style="
+              padding: 10px;
+              border-radius: 8px;
+              border: 1px solid #eee;
+              width: 100%;
+              margin-bottom: 8px;
+            ">
+            <option>IV Glow Drip</option>
+            <option>Mesotherapy</option>
+            <option>Teeth Whitening</option>
+            <option>Lipolysis</option>
+          </select>
+          <div style="display: flex; gap: 8px">
+            <button class="cta-btn" type="submit">Send</button>
+            <a class="pill" id="modalWa" href="#" target="_blank"
+              >Confirm on WhatsApp</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openBooking() {
+        document.getElementById("bookingModal").style.display = "flex";
+      }
+      function closeBooking() {
+        document.getElementById("bookingModal").style.display = "none";
+      }
+
+      function submitModal(e) {
+        e.preventDefault();
+        const name = document.getElementById("m_name").value;
+        const phone = document.getElementById("m_phone").value;
+        const service = document.getElementById("m_service").value;
+        // Build WhatsApp message
+        const text = encodeURIComponent(
+          `Hi Ada, my name is ${name}. I'd like to book a ${service}. My WhatsApp is ${phone}.`
+        );
+        const wa = `https://wa.me/2348120221368?text=${text}`;
+        // open WhatsApp in new tab
+        window.open(wa, "_blank");
+        closeBooking();
+        return false;
+      }
+
+      function submitContact(e) {
+        e.preventDefault();
+        // Convert form into WhatsApp message as default behaviour (safe and reliable)
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const service = document.getElementById("service").value;
+        const date =
+          document.getElementById("date").value || "no date specified";
+        const notes = document.getElementById("notes").value || "";
+        const text = encodeURIComponent(
+          `Hi Ada, my name is ${name}. I want to book ${service} on ${date}. Phone: ${phone}. Notes: ${notes}`
+        );
+        const wa = `https://wa.me/2348120221368?text=${text}`;
+        window.open(wa, "_blank");
+        return false;
+      }
+
+      // Small accessibility: handle escape to close modal
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeBooking();
+        }
+      });
+    </script>
+  </body>
+</html>
